@@ -1,0 +1,17 @@
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\Proeventos.Application.deps.json
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\Proeventos.Application.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\ref\Proeventos.Application.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\Proeventos.Application.pdb
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.csproj.AssemblyReference.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.AssemblyInfoInputs.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.AssemblyInfo.cs
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.csproj.CoreCompileInputs.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\ref\Proeventos.Application.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.pdb
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\ProEventos.Damain.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\ProEventos.Persistence.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\ProEventos.Damain.pdb
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\bin\Debug\net5.0\ProEventos.Persistence.pdb
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Application\obj\Debug\net5.0\Proeventos.Application.csproj.CopyComplete

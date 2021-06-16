@@ -1,0 +1,12 @@
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\bin\Debug\net5.0\ProEventos.Damain.deps.json
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\bin\Debug\net5.0\ProEventos.Damain.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\bin\Debug\net5.0\ref\ProEventos.Damain.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\bin\Debug\net5.0\ProEventos.Damain.pdb
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.csproj.AssemblyReference.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.AssemblyInfoInputs.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.AssemblyInfo.cs
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.csproj.CoreCompileInputs.cache
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ref\ProEventos.Damain.dll
+C:\Users\rafae\Music\AngularV2\server\ProEventos.Damain\obj\Debug\net5.0\ProEventos.Damain.pdb

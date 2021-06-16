@@ -12,7 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ProEventos.Api.Data;
+using Proeventos.Application;
+using Proeventos.Application.Contratos;
+using ProEventos.Persistence;
+using ProEventos.Persistence.Contexto;
+using ProEventos.Persistence.Contratos;
 
 namespace ProEventos.Api
 {
@@ -29,10 +33,15 @@ namespace ProEventos.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<DataContext>(
+            services.AddDbContext<ProEventosContext>(
               context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
-            services.AddControllers();
+            services.AddControllers()
+             .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling =
+             Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddScoped<IEventosService, EventoService>();
+            services.AddScoped<IGeralPersistence, GeralPersistence>();
+            services.AddScoped<IEventoPersistence, EventoPersistence>();
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

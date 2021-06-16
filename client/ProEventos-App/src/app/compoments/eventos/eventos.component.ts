@@ -18,12 +18,12 @@ export class EventosComponent implements OnInit {
   public get filtroLista() {
     return this._filtroLista
   }
-
+//seta a lista de eventos
   public set filtroLista(value: string) {
     this._filtroLista = value;
     this.eventosFiltrados = this.filtroLista ? this.filtraEventos(this.filtroLista) : this.eventos;
   }
-
+ //Filtra a lista de eventos por tema ou local//
   filtraEventos(filtraPor: string): any {
     filtraPor = filtraPor.toLocaleLowerCase();
     return this.eventos.filter((event: { tema: string; local:string }) => event.tema.toLocaleLowerCase().indexOf(filtraPor) !== -1 ||
