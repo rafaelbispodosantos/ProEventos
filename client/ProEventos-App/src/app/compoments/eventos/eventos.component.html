@@ -1,6 +1,6 @@
 
 
-<h2>Eventos</h2>
+<app-titulo [titulo] = "'Evento'"></app-titulo>
 <hr>
 
 <div  class="form-inline">
@@ -19,7 +19,8 @@
           <th>
             <button type="button" class="btn btn-outline-light btn-block"
             (click)="alterarImagem()">
-            {{mostrarImagem ? 'Mostra' : 'ocultar'}}
+            <i class ="{{mostrarImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
+
             </button>
           </th>
           <th>#</th>
@@ -28,6 +29,7 @@
           <th>Data</th>
           <th>Qtd Pessoas</th>
           <th>Lote</th>
+
           <th>Opçoes</th>
         </tr>
       </thead>
@@ -47,15 +49,27 @@
            [style.margin.px]="marginImg"
            > -->
           </td>
-         <td>{{evento.eventoId}}</td>
-
+         <td>{{evento.id}}</td>
          <td>{{evento.tema}}</td>
          <td>{{evento.local}}</td>
-         <td>{{evento.dataEvento}}</td>
+         <td>{{evento.dataEvento | DateFormtPipe}}</td>
          <td>{{evento.qtdPessoas}}</td>
-         <td>{{evento.lote}}</td>
-         <td><button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
-          <button type="button" class="btn btn-danger btn-sm">Excluir</button></td>
+         <td>{{evento.lotes[0].name}}</td>
+
+
+         <td>
+           <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar"
+            (click)="openModal(template)">
+              <i class="fa fa-edit"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir"
+              (click)="openModal(template)" >
+                <i class="fa fa-trash"></i>
+               </button>
+           </div>
+          </td>
+
      </tbody>
      <tfoot *ngIf="!eventos.length">
        <tr>
@@ -65,5 +79,40 @@
        </tr>
      </tfoot>
     </table>
+
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Tem Certeza que quer deletart esse evento?</p>
+    <button type="button" class="btn btn-default" (click)="confirm()">Sim</button>
+    <button type="button" class="btn btn-primary" (click)="decline()">Não</button>
+  </div>
+</ng-template>
+
+
+
+
+
+
+
+
+
+-
+    <!-- {
+
+      "local": "Bahia",
+      "dataEvento": "2021-06-17T01:00:35.005Z",
+      "tema": "Java",
+      "qtdPessoas": 360,
+      "imagemUrl": "foto3.png",
+      "telefone": "1145454545",
+      "email": "rafaelBispo@hotmail.com",
+      "lotes": [
+        {
+          "name": "1º Lote",
+          "preco": 50,
+          "dateInicio": "2021-06-17T01:00:35.005Z",
+          "dataFim": "2021-06-17T01:00:35.005Z",
+          "quantidade": 150, -->
 
 

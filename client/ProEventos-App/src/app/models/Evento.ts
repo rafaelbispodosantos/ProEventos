@@ -12,7 +12,7 @@ export interface Evento {
     telefone: string;
     email: string;
     eventoId: number;
-    lote: Lote[];
+    lotes: Lote[];
     redesSociais: RedeSocial[];
     palestrantesEventos: Palestrante[];
 
