@@ -12,7 +12,7 @@ import { NavComponent } from './compoments/nav/nav.component';
 import { DateTimeFormtPipe } from './helpers/DateTimeFormt.pipe';
 import { ContatosComponent } from './compoments/contatos/contatos.component';
 import { DashboardComponent } from './compoments/dashboard/dashboard.component';
-import { PerfilComponent } from './compoments/perfil/perfil.component';
+import { PerfilComponent } from './compoments/user/perfil/perfil.component';
 
 import {TooltipModule} from 'ngx-bootstrap/tooltip'
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
@@ -21,6 +21,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import {ToastrModule} from 'ngx-toastr'
 import { CommonModule } from '@angular/common';
 import { TituloComponent } from './shared/titulo/titulo.component';
+import { EventosDetalheComponent } from './compoments/eventos/eventos-detalhe/eventos-detalhe.component';
+import { EventosListaComponent } from './compoments/eventos/eventos-lista/eventos-lista.component';
+import { UserComponent } from './compoments/user/user.component';
+import { LoginComponent } from './compoments/user/login/login.component';
+import { RegistrationComponent } from './compoments/user/registration/registration.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +38,14 @@ import { TituloComponent } from './shared/titulo/titulo.component';
     ContatosComponent,
     DashboardComponent,
     PerfilComponent,
-    TituloComponent
+    TituloComponent,
+    EventosDetalheComponent,
+    EventosListaComponent,
+    UserComponent,
+    LoginComponent,
+    RegistrationComponent,
+
+
 
 
 
@@ -50,7 +63,7 @@ import { TituloComponent } from './shared/titulo/titulo.component';
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 2000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
       progressAnimation:'increasing'
