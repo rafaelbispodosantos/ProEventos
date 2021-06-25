@@ -9,6 +9,7 @@ using ProEventos.Damain;
 using ProEventos.Persistence.Contexto;
 using Proeventos.Application.Contratos;
 using Microsoft.AspNetCore.Http;
+using ProEventos.Api.Dtos;
 
 namespace ProEventos.Api.Controllers
 {
@@ -32,8 +33,23 @@ namespace ProEventos.Api.Controllers
       {
           var eventos = await _eventoService.GetAllEventosAsync(true);
           if(eventos == null) return NotFound("Nenhum evento encontrada");
+          var eventosRetorno = new List<EventoDto>();
 
-          return Ok(eventos);
+          foreach (var evento in eventos)
+          {
+            eventosRetorno.Add(new EventoDto(){
+              Id= evento.Id,
+              Local= evento.Local,  
+              DataEvento= evento.DataEvento.ToString(),
+              Tema = evento.Tema,
+              QtdPessoas= evento.QtdPessoas,
+              ImagemUrl= evento.ImagemUrl,
+              Telefone= evento.Telefone,
+              Email= evento.Email
+            });
+          }
+
+          return Ok(eventosRetorno);
       }
       catch (Exception ex)
       {
