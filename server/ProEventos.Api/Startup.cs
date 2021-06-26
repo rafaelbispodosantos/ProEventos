@@ -17,7 +17,7 @@ using Proeventos.Application.Contratos;
 using ProEventos.Persistence;
 using ProEventos.Persistence.Contexto;
 using ProEventos.Persistence.Contratos;
-
+using AutoMapper;
 namespace ProEventos.Api
 {
     public class Startup
@@ -36,12 +36,17 @@ namespace ProEventos.Api
             services.AddDbContext<ProEventosContext>(
               context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
+            
             services.AddControllers()
              .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling =
              Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddScoped<IEventosService, EventoService>();
             services.AddScoped<IGeralPersistence, GeralPersistence>();
             services.AddScoped<IEventoPersistence, EventoPersistence>();
+
             services.AddCors();
             services.AddSwaggerGen(c =>
             {

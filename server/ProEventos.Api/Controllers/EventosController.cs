@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using ProEventos.Persistence;
-using ProEventos.Damain;
-using ProEventos.Persistence.Contexto;
 using Proeventos.Application.Contratos;
 using Microsoft.AspNetCore.Http;
-using ProEventos.Api.Dtos;
+using ProEventos.Application.Dtos;
 
 namespace ProEventos.Api.Controllers
 {
@@ -32,24 +26,12 @@ namespace ProEventos.Api.Controllers
       try
       {
           var eventos = await _eventoService.GetAllEventosAsync(true);
-          if(eventos == null) return NotFound("Nenhum evento encontrada");
-          var eventosRetorno = new List<EventoDto>();
+          if(eventos == null) return NoContent();
+          
 
-          foreach (var evento in eventos)
-          {
-            eventosRetorno.Add(new EventoDto(){
-              Id= evento.Id,
-              Local= evento.Local,  
-              DataEvento= evento.DataEvento.ToString(),
-              Tema = evento.Tema,
-              QtdPessoas= evento.QtdPessoas,
-              ImagemUrl= evento.ImagemUrl,
-              Telefone= evento.Telefone,
-              Email= evento.Email
-            });
-          }
+          
 
-          return Ok(eventosRetorno);
+          return Ok(eventos);
       }
       catch (Exception ex)
       {
@@ -66,7 +48,7 @@ namespace ProEventos.Api.Controllers
        try
       {
           var evento = await _eventoService.GetEventoByAsync(id,true);
-          if(evento == null) return NotFound("Nenhum evento encontrada");
+          if(evento == null) return  NoContent();
 
           return Ok(evento);
       }
@@ -84,7 +66,7 @@ namespace ProEventos.Api.Controllers
        try
       {
           var evento = await _eventoService.GetAllEventosByTemaAsync(tema, true);
-          if(evento == null) return NotFound("Evento Tema não encontrada");
+          if(evento == null) return  NoContent();
 
           return Ok(evento);
       }
@@ -96,12 +78,12 @@ namespace ProEventos.Api.Controllers
       }
     }
     [HttpPost]
-    public async Task<IActionResult> Post(Evento model)
+    public async Task<IActionResult> Post(EventoDto model)
     {
        try
       {
           var evento = await _eventoService.AddEventos(model);
-          if(evento == null) return BadRequest("Erro ao tentar adicionar evento");
+          if(evento == null) return  NoContent();
 
           return Ok(evento);
       }
@@ -113,7 +95,7 @@ namespace ProEventos.Api.Controllers
       }
     }
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(int id, Evento model)
+    public async Task<IActionResult> Put(int id, EventoDto model)
     {
            try
       {
